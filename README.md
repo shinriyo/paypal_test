@@ -8,5 +8,10 @@ the print doesn't work.
 print 'show_me_the_money called'
 print 'payment_status is ST_PP_COMPLETED'
 
+PayPal sandbox
 ID: shinriyotest@gmail.com
+PASS: testtest
+
+Admin
+ID: shinriyotest
 PASS: testtest
