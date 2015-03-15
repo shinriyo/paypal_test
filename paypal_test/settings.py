@@ -36,10 +36,14 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'paypal.standard.ipn',
+    #'paypal.standard.ipn',
+    'paypal.standard.pdt',
     'blogs',
     #'generate_scaffold',
 )
+
+PAYPAL_IDENTITY_TOKEN = ''
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
