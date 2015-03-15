@@ -13,6 +13,7 @@ print 'payment_status is ST_PP_COMPLETED'
 ## PayPal sandbox
 
 ID: shinriyotest@gmail.com
+
 PASS: testtest
 
 ## Admin
