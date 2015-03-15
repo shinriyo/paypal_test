@@ -14,6 +14,7 @@ urlpatterns = patterns('',
 
 from paypal.standard.models import ST_PP_COMPLETED
 from paypal.standard.ipn.signals import valid_ipn_received
+# from paypal.standard.ipn.signals import payment_was_successful
 from blogs.models import PurchaseHistory
 
 
@@ -33,4 +34,7 @@ def show_me_the_money(sender, **kwargs):
     #else:
     #    #...
 
-valid_ipn_received.connect(show_me_the_money)
+# valid_ipn_received.connect(show_me_the_money)
+payment_was_successful.connect(show_me_the_money)
+# DeprecationWarning: payment_was_successful is deprecated, please migrate to valid_ipn_received instead
+# payment_was_successful.connect(show_me_the_money)
