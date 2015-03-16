@@ -16,7 +16,7 @@ def view_that_asks_for_money(request):
         #"amount": "10000000.00",
         "item_name": "name of the item",
         #"invoice": "unique-invoice-id",
-        "invoice": "unique-invoice-id8",
+        "invoice": "unique-invoice-id12",
         #"notify_url": "https://www.example.com" + reverse('paypal-ipn'),
         "notify_url": url + reverse('paypal-ipn'),
         #"return_url": "https://www.example.com/your-return-location/",

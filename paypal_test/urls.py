@@ -17,7 +17,10 @@ from paypal.standard.ipn.signals import valid_ipn_received
 # from paypal.standard.ipn.signals import payment_was_successful
 from blogs.models import PurchaseHistory
 
+from django.views.decorators.csrf import csrf_exempt
+# Create your views here.
 
+@csrf_exempt
 def show_me_the_money(sender, **kwargs):
     print 'show_me_the_money called'
     p = PurchaseHistory(name='test')
