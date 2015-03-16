@@ -34,7 +34,7 @@ def show_me_the_money(sender, **kwargs):
     #else:
     #    #...
 
-# valid_ipn_received.connect(show_me_the_money)
-payment_was_successful.connect(show_me_the_money)
+valid_ipn_received.connect(show_me_the_money)
+# payment_was_successful.connect(show_me_the_money)
 # DeprecationWarning: payment_was_successful is deprecated, please migrate to valid_ipn_received instead
 # payment_was_successful.connect(show_me_the_money)

@@ -36,13 +36,13 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'paypal.standard.ipn',
-    'paypal.standard.pdt',
+    'paypal.standard.ipn',
+    #'paypal.standard.pdt',
     'blogs',
     #'generate_scaffold',
 )
 
-PAYPAL_IDENTITY_TOKEN = ''
+PAYPAL_IDENTITY_TOKEN = 'aljvMHl5XynYFc98eREOkWeGU1QPTmtAf_XOOuk-IqEce9h3sJYzJL-KfJa'
 
 
 MIDDLEWARE_CLASSES = (
@@ -88,5 +88,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-PAYPAL_RECEIVER_EMAIL = "shinriyo@gmail.com"
+#PAYPAL_RECEIVER_EMAIL = "shinriyo@gmail.com"
+PAYPAL_RECEIVER_EMAIL = "shinriyo-facilitator@gmail.com"
 PAYPAL_TEST = True
