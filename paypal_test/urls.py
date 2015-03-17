@@ -18,24 +18,29 @@ from paypal.standard.ipn.signals import valid_ipn_received
 from blogs.models import PurchaseHistory
 
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.models import User
 # Create your views here.
 
 @csrf_exempt
 def show_me_the_money(sender, **kwargs):
     print 'show_me_the_money called'
-    p = PurchaseHistory(name='test')
-    p.save()
+    # p = PurchaseHistory(name='test')
+    # p.save()
 
     ipn_obj = sender
     if ipn_obj.payment_status == ST_PP_COMPLETED:
-        print 'payment_status is ST_PP_COMPLETED'
+        # it can't shown. it guess it is other thread.
+        # print 'payment_status is ST_PP_COMPLETED'
+        user_id = int(ipn_obj.custom)
+        user = User.objects.get(pk=user_id)
+
         # Undertake some action depending upon `ipn_obj`.
-        p = PurchaseHistory(name='ST_PP_COMPLETED')
+        p = PurchaseHistory(name=user.username, message='ST_PP_COMPLETED')
         p.save()
         #if ipn_obj.custom == "Upgrade all users!":
         #    Users.objects.update(paid=True)
-    #else:
-    #    #...
+    else: # failed
+        pass
 
 valid_ipn_received.connect(show_me_the_money)
 # payment_was_successful.connect(show_me_the_money)
