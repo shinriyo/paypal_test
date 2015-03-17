@@ -2,7 +2,10 @@
 
 valid_ipn_received.connect(show_me_the_money) can't catch.
 
-show_me_the_money() never is called in `paypaltest/urls.py`
+# show_me_the_money() never is called in `paypaltest/urls.py`
+
+I resolved it!!
+You must set of your PayPal site.
 
 ```
 the print functions doesn't work.
@@ -27,6 +30,12 @@ PASS: testtest
 
 Django 1.6.4
 django-paypal 0.2
+
+You also install for watching your admin.
+
+```
+pip install pytz
+```
 
 PayPal is IPN
 IPN is this.
